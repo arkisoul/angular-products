@@ -1,0 +1,13 @@
+<div>
+    <h1>Products</h1>
+    <div><a routerLink="/products/add">Add New</a></div>
+    <div class="products-list" *ngIf="products && products.length > 0">
+        <div class="product" *ngFor="let product of products">
+            <h2>{{product.title}}</h2>
+            <div>
+                <p>{{product.price}}</p>
+                <img src="{{product.image}}" alt="Product">
+            </div>
+        </div>
+    </div>
+</div>
